@@ -1,0 +1,73 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Titles:</div>
+                        <div class='col-md-6'></div>
+                    <input id="movieName" type="text" name="movieName" [(ngModel)]="movie.movieName">
+                    <!--<input #movieName id="movieName" type="text" required maxlength="50">-->
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Actor</div>
+                        <div class='col-md-6'></div>
+                    <input id="movieStar" type="text" name="movieStar" [(ngModel)]="movie.movieStar">
+                    <!--<input #movieStar id="movieStar" type="text" required maxlength="50">-->
+                </div>                
+                <div class='row'>
+                    <div class='col-md-3'>Description:</div>  
+                    <div class='col-md-6'></div>  
+                    <input id="description" type="text" name="description" [(ngModel)]="movie.description">   
+                    <!--<input #description id="description" type="text" required maxlength="100">-->
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Availability:</div>
+                    <div class='col-md-6'></div>  
+                    <input id="releaseDate" type="text" name="releaseDate" [(ngModel)]="movie.releaseDate"> 
+                    <!--<input #releaseDate id="releaseDate" type="text" class="datepicker">-->
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Price:</div>
+                    <div class='col-md-6'></div>
+                    <input id="price" type="text" name="price" [(ngModel)]="movie.price">
+                    <!--<input #price id="price" type="text">-->
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Reviews:</div>
+                    <div class='col-md-6'></div>
+                    <input id="starRating" type="text" name="starRating" [(ngModel)]="movie.starRating">
+                    <!--<input #starRating id="starRating" type="text">-->
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Image Url:</div>
+                    <div class='col-md-6'></div>
+                    <input id="imageUrl" type="text" name="imageUrl" [(ngModel)]="movie.imageUrl">
+                    <!--<input #imageUrl id="imageUrl" type="text" required maxlength="200">-->
+                </div>                
+            </div>
+            <div class='col-md-6'>
+            </div>
+        </div>
+    </div>
+    <div class='panel-footer'>
+        <div class='row'>
+            <div class='col-md-3'>
+                <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+                    <i class='glyphicon glyphicon-chevron-left'></i> Back!
+                </a>
+            </div>
+            <div class='col-md-6'>
+                <!--<a class='btn btn-default' (click)="onInserting(movieName.value, movieStar.value, description.value,
+                                                    releaseDate.value, price.value, starRating.value,
+                                                    imageUrl.value)" style='width:80px'>-->
+                <a class='btn btn-default' (click)="onInserting(movie)" style='width:80px'>                                                    
+                    <i class='glyphicon glyphicon glyphicon-star'></i> Save
+                </a>
+            </div>            
+        </div>
+
+    </div>
+</div>
